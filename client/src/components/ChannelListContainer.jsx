@@ -31,7 +31,7 @@ const SideBar = () => (
 
 const CompanyHeader = () => (
     <div className = "channel-list__header">
-        <p className = "channel-list__header__text">Blink Chat</p> 
+        <p className = "channel-list__header__text">Blink</p> 
 
     </div>
 )
@@ -53,7 +53,7 @@ const ChannelListContainer = () => {
                         type = "team"
                     />
                 )}
-                
+
                 Preview={(previewProps) => (
                     <TeamChannelPreview
                     {...previewProps}

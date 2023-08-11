@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #808080;
+  --primary-color: #5862e3;
   --primary-color-alpha: #005fff1a;
 }
 
@@ -450,7 +450,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 16px;
+  padding-top: 10px;
   border-top: 1px solid #00000033;
 }
 
@@ -459,7 +459,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 40px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(40, 40, 40, 0.2);
   border-radius: 8px;
   margin-bottom: 8px;
   border: 1px solid transparent;
