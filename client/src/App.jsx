@@ -1,14 +1,13 @@
 import React from 'react';
-import { Streamchat } from 'stream-chat';
+import { StreamChat } from 'stream-chat';
 import { Chat } from 'stream-chat-react';
-import Cookies from 'universal-cookies';
+import Cookies from 'universal-cookie';
 
-import { ChannelListCotainer, ChannelContainer } from './components';
+import { ChannelListContainer, ChannelContainer } from './components';
 
 import './App.css';
 
 const apiKey = 'yej74jgc3aeq';
-
 const client = StreamChat.getInstance(apiKey);
 
 const App = () => {
