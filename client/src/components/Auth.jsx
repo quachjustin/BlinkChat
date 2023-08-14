@@ -4,19 +4,44 @@ import axios from 'axios';
 
 import signinImage from '../assets/signupiconv1.png';
 
+//all fields must be reset to empty string
+const initialState = {
+    fullname: '',
+    username: '',
+    password: '',
+    confirmPassword: '',
+    phoneNumber: '',
+    avatarUrl: '',
+
+}
+
 const Auth = () => {
+    const [form, setForm] = useState(initialState);
     const [isSignup, setIsSignup] = useState(true);
-    const handleChange = () => {}
+
+//set target in brackets and set equal to the e.target.value
+    const handleChange = (e) => {
+        setForm({...form, [e.target.name]: e.target.value });
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        
+        console.log(form);
+    }
+
+
     const switchMode = () => {
         setIsSignup((prevIsSignup) => !prevIsSignup);
     }
+
 
     return (
         <div className = "auth__form-container">
             <div className = "auth__form-container_fields">
                 <div className = "auth__form-container_fields-content">
                     <p>{isSignup ? 'Sign Up' : 'Sign In'}</p>
-                    <form onSubmit= {() => {}}>
+                    <form onSubmit= {handleSubmit}>
                         {isSignup && (
                             <div className = "auth__form-container_fields-content_input">
                                 <label htmlFor = "fullName">Full Name</label>
@@ -85,6 +110,9 @@ const Auth = () => {
                                 />
                             </div>  
                         )}
+                        <div className= "auth__form-container_fields-content_button">
+                            <button>{isSignup ? "Sign Up" : "Sign In"}</button>
+                        </div>
                     </form>
                     <div className = "auth__form-container_fields-account">
                         <p>
