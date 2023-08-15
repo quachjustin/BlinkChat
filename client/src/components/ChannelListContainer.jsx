@@ -6,13 +6,15 @@ import { ChannelSearch, TeamChannelList, TeamChannelPreview } from './';
 import Blinkchaticon from '../assets/blinkchat.png'
 import Logouticon from '../assets/logoutnew.png'
 
+const cookies = new Cookies();
+
 
 //stream gives access to api to search channels, send messages etc;
 
 //blinkchaticon
 //alt = blinkicon
 
-const SideBar = () => (
+const SideBar = ( { logout }) => (
     <div className = "channel-list__sidebar">
         <div className = "channel-list__sidebar__icon1">
             <div className = "icon1__inner">
@@ -20,7 +22,7 @@ const SideBar = () => (
             </div>
         </div>
         <div className = "channel-list__sidebar__icon2">
-            <div className = "icon1__inner">
+            <div className = "icon1__inner" onClick = {logout}>
                 <img src = { Logouticon } alt = "Logout" width = "29" />
             </div>
         </div>
@@ -37,9 +39,22 @@ const CompanyHeader = () => (
 )
 
 const ChannelListContainer = () => {
+    const logout = () => {
+        cookies.remove("token");
+        cookies.remove('userId');
+        cookies.remove('username');
+        cookies.remove('fullName');
+        cookies.remove('avatarURL');
+        cookies.remove('hashedPassword');
+        cookies.remove('phoneNumber');
+        
+        window.location.reload();
+    }
+
+
   return (
     <>
-        < SideBar />
+        < SideBar logout = {logout} />
         <div className = "channel-list__list__wrapper">
             <CompanyHeader />
             <ChannelSearch />
