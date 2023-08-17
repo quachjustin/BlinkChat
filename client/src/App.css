@@ -388,7 +388,7 @@ body {
       rgba(0, 0, 0, 0.1) 12.73%,
       rgba(0, 0, 0, 0) 89.32%
     ),
-    #f5f1f1;
+    #191919;
   border-radius: 9999px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.33);
 }
@@ -417,7 +417,7 @@ body {
       rgba(0, 0, 0, 0.1) 12.73%,
       rgba(0, 0, 0, 0) 89.32%
     ),
-    #ffffff;
+    #101010;
   border-radius: 9999px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.33);
   cursor: pointer;

@@ -3,8 +3,8 @@ import { ChannelList, useChatContext } from 'stream-chat-react';
 import Cookies from 'universal-cookie';
 import { ChannelSearch, TeamChannelList, TeamChannelPreview } from './';
 
-import Blinkchaticon from '../assets/blinkchat.png'
-import Logouticon from '../assets/logoutnew.png'
+import Blinkchaticon from '../assets/blinklogov2.png'
+import Logouticon from '../assets/logoutv2.png'
 
 const cookies = new Cookies();
 
@@ -23,7 +23,7 @@ const SideBar = ( { logout }) => (
         </div>
         <div className = "channel-list__sidebar__icon2">
             <div className = "icon1__inner" onClick = {logout}>
-                <img src = { Logouticon } alt = "Logout" width = "29" />
+                <img src = { Logouticon } alt = "Logout" width = "26" />
             </div>
         </div>
     </div>
