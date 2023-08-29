@@ -14,4 +14,4 @@ export {default as TeamMessage} from './TeamMessage';
 export {default as Auth} from './Auth';
 export {default as UserList} from './UserList';
 
-export {default as ResultsDropDown } from './ResultsDropdown'
+export {default as ResultsDropdown } from './ResultsDropdown'
